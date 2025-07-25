@@ -25,4 +25,22 @@ public class EmployeeServiceImp  implements IEmployeeService {
 		return  dao.displayAllEmployees();
 	}
 
+	@Override
+	public int updateEmployee(Employee emp) {
+		
+		return dao.updateEmployee(emp);
+	}
+
+	@Override
+	public Employee selectByEid(int eid) {
+		
+		return dao.selectByEid(eid);
+	}
+
+	@Override
+	public int deleteByEid(int eid) {
+		
+		return dao.deleteByEid(eid);
+	}
+
 }

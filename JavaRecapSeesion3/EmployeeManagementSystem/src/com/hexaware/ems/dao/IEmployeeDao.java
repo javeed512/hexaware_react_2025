@@ -10,6 +10,12 @@ public interface IEmployeeDao {
 	
 	public   List<Employee>    displayAllEmployees();
 	
+	public  int  updateEmployee(Employee emp);
+	
+	public    Employee   selectByEid(int eid);
+	
+	public     int  deleteByEid(int eid);
+	
 	
 
 }
