@@ -1,0 +1,21 @@
+
+
+Assignment: 45mins
+
+Create Maven spring maven project
+i.spring context  ii. mysql jdbc 
+
+Create Packages as per the Layered Architecture
+com.hexaware.projectname.entities
+com.hexaware.projectname.service
+com.hexaware.projectname.dao / repository
+
+Copy paste code from existing Layered Architecture example
+
+Use stereo type annotations
+
+Replace manual object with @Autowire
+
+Use @Bean annotation for DB Connection
+
+In Main  class create context obj 
