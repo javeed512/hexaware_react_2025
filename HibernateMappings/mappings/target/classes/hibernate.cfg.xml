@@ -21,8 +21,20 @@
 	
 	<!-- Mapping model/entity class having annotations   -->
 	
-		<mapping  class="com.hexaware.mappings.entities.Employee"  />  
-		<mapping  class="com.hexaware.mappings.entities.Address"  />  
+	<!-- OneToOne mappings -->
+	<!-- 	<mapping  class="com.hexaware.mappings.entities.Employee"  />  
+		<mapping  class="com.hexaware.mappings.entities.Address"  />   -->
+	
+	
+	
+	<mapping  class="com.hexaware.mappings.entities.Emp"  />
+	
+	<mapping  class="com.hexaware.mappings.entities.Department"  />
+	
+	
+	
+	<mapping  class="com.hexaware.mappings.entities.Product"  />
+	<mapping  class="com.hexaware.mappings.entities.Order"  />
 	
 
 	</session-factory>
