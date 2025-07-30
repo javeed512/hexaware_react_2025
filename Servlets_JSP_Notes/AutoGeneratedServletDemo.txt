@@ -1,0 +1,49 @@
+
+JSP Elements/Tags:
+-------------------
+1. Scriplet  
+<%  here any java code which go to the jspService()  %>
+
+
+
+hello.jsp
+
+Web Container/Tomcat server
+
+//Auto Generated servlet
+class   Hello_Servlet   extends HttpServlet{
+
+	
+		jspInit(){
+
+		}
+
+		jspService(request,response){
+
+				HttpSession session;
+				PrintWriter out;
+				ServletConfig config;
+				
+		out.print("Hello friends");
+
+		out.print("<h1>WELCOME TO JSP</h1>");
+
+
+		
+		int x =100;
+
+		out.print(session);
+
+
+		}
+
+		jspDestroy(){
+
+
+
+		}
+
+
+
+}
+

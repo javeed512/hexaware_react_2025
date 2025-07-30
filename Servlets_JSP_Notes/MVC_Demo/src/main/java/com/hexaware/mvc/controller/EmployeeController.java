@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import com.hexaware.mvc.pojo.Employee;
+import com.hexaware.mvc.service.EmployeeServiceImp;
+import com.hexaware.mvc.service.IEmployeeService;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -17,6 +19,12 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/EmployeeController")
 public class EmployeeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+	
+	
+	IEmployeeService  service = new EmployeeServiceImp();
+	
+	
+	
 
     /**
      * Default constructor. 
@@ -56,6 +64,9 @@ public class EmployeeController extends HttpServlet {
 				
 				// service.addEmp(emp); ---> // dao.addEmp(emp); ---> jdbc code ---> database table
 		
+		int count =	service.addEmployee(emp);
+		
+			out.print("<br>"+count +"Record  inserted..");
 		
 	}
 
