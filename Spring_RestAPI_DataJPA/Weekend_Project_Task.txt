@@ -1,0 +1,12 @@
+Project Case Study Weekend Task:
+
+1. Create Spring Boot Project with
+	i.Spring Web ii. Spring Data JPA iii. Mysql driver
+
+2. Create packages
+	com.hexaware.projectname.entities (Add Entities classes here , perform mappings)
+	com.hexaware.projectname.repository (Create repository interfaces for all entities)
+
+	com.hexaware.projectname.service  (create service interface with method declares)
+	
+	com.hexaware.projectname.controller
