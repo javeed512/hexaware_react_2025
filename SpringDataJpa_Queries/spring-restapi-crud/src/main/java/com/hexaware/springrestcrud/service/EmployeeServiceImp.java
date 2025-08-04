@@ -1,0 +1,71 @@
+package com.hexaware.springrestcrud.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.hexaware.springrestcrud.entity.Employee;
+import com.hexaware.springrestcrud.repository.EmployeeRepository;
+
+@Service
+public class EmployeeServiceImp implements IEmployeeService {
+	
+	
+	@Autowired
+	EmployeeRepository repo;
+	
+
+	@Override
+	public Employee addEmployee(Employee emp) {
+	
+		return   repo.save(emp);  // insert
+	}
+
+	@Override
+	public Employee updateEmployee(Employee emp) {
+		
+		return  repo.save(emp);  // update
+	}
+
+	@Override
+	public Employee getByEid(int eid) {
+		
+		return    repo.findById(eid).orElse(null);
+	}
+
+	@Override
+	public String deleteByEid(int eid) {
+		
+			repo.deleteById(eid);
+		
+	
+		return "Record  Deleted  successfully...";
+	}
+
+	@Override
+	public List<Employee> getAllEmployees() {
+		
+		return   repo.findAll();
+	}
+
+	@Override
+	public List<Employee> getByEname(String ename) {
+
+
+		return   repo.findByEname(ename);
+	}
+
+	@Override
+	public List<Employee> getBySalaryGT(double salary) {
+	
+		return repo.findBySalaryGreaterThan(salary);
+	}
+
+	@Override
+	public List<Employee> findBySalaryOrderByEname(double salary) {
+		
+		return repo.findBySalaryOrderByEname(salary);
+	}
+
+}
