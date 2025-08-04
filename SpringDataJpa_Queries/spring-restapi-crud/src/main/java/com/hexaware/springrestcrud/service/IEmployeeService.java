@@ -17,10 +17,16 @@ public interface IEmployeeService {
 			
 			public   List<Employee>      getAllEmployees();
 			
+			public   List<Employee>      getAllEmployeesSorted();
+			
 			public  List<Employee>   getByEname(String ename);
 			
 			public  List<Employee>   getBySalaryGT(double salary);
 			
 			List<Employee>   findBySalaryOrderByEname(double salary);
+			
+			public int  updateSalary(double salary , int eid);
+			
+			public List<Employee>  getAllBySQL();
 	
 }

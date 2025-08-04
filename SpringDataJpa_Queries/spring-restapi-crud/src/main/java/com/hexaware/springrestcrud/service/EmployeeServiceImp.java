@@ -3,12 +3,16 @@ package com.hexaware.springrestcrud.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.hexaware.springrestcrud.entity.Employee;
 import com.hexaware.springrestcrud.repository.EmployeeRepository;
 
 @Service
+@Transactional
 public class EmployeeServiceImp implements IEmployeeService {
 	
 	
@@ -66,6 +70,26 @@ public class EmployeeServiceImp implements IEmployeeService {
 	public List<Employee> findBySalaryOrderByEname(double salary) {
 		
 		return repo.findBySalaryOrderByEname(salary);
+	}
+
+	@Override
+	public int updateSalary(double salary, int eid) {
+		
+		return repo.updateSalary(salary, eid);
+	}
+
+	@Override
+	public List<Employee> getAllEmployeesSorted() {
+		
+		//return  repo.findAll(Sort.by("ename")); // select * from Emp_Table order by ename;
+		
+		return repo.findAll(Sort.by(Direction.DESC, "salary"));
+	}
+
+	@Override
+	public List<Employee> getAllBySQL() {
+		
+		return repo.getAllBySQL();
 	}
 
 }

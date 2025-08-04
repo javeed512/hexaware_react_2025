@@ -53,6 +53,14 @@ public class EmployeeRestController {
 					
 				}
 				
+				@GetMapping("/getallsorted")
+				public  List<Employee>  getAllSorted(){
+					
+					
+					return service.getAllEmployeesSorted();
+					
+				}
+				
 				
 				@DeleteMapping("/deletebyid/{eid}")
 				public String   deleteById(@PathVariable int eid) {
@@ -84,5 +92,20 @@ public class EmployeeRestController {
 					return  service.findBySalaryOrderByEname(salary);
 				}
 
+				@PutMapping("/updatesalary/{eid}/{salary}")
+				public String   updateSalary(@PathVariable int eid , @PathVariable double salary) {
+					
+						int count =	service.updateSalary(salary, eid);
+					
+					return count +" Record updated...";
+				}
+				
+				@GetMapping("/getallbysql")
+				public List<Employee>  getAllBySQL(){
+					
+					
+					return service.getAllBySQL();
+					
+				}
 				
 }
