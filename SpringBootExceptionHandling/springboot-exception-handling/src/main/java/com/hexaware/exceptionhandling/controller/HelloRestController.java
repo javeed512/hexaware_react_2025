@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.hexaware.exceptionhandling.UserException;
 import com.hexaware.exceptionhandling.service.HelloService;
 
 @RestController
@@ -16,6 +17,23 @@ public class HelloRestController {
 	
 	@Autowired
 	HelloService service;
+	
+	
+		
+		
+			@GetMapping("/exp")
+			public void   raiseExp()throws UserException {
+				
+				
+				
+					throw	new  UserException();
+				
+				
+				
+				
+			}
+	
+	
 	
 			@GetMapping("/hello")
 			public  ResponseEntity<String> hello() {

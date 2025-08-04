@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import com.hexaware.exceptionhandling.UserException;
+
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 	
@@ -18,6 +20,16 @@ public class GlobalExceptionHandler {
 					
 					
 				}
+				
+				
+				@ExceptionHandler(UserException.class)
+				@ResponseStatus(reason ="User exception occur and handled by global exp handler" , code =HttpStatus.ACCEPTED)
+				public void handler2() {
+					
+					
+					
+				}
+				
 	
 
 }
