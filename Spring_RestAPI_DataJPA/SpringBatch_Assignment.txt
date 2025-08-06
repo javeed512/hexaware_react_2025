@@ -1,0 +1,16 @@
+
+
+Spring Batch Assignment:
+
+Do revise spring batch demo project
+
+Do changes in ItemProcessor class / apply some different filters on Person Entity
+
+
+
+Create a new Spring Batch project , take anyone entity class from case study.
+
+Read data from CSV file and Write to the Database
+
+Before writing data process it with  some filters 
+
