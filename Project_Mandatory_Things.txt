@@ -1,0 +1,17 @@
+
+
+Final Project :
+
+1. all required packages
+2. Naming convections
+3. Layered ARchitecture , REST MVC Architecture
+4. RestControllers
+5. Service interfaces and Implementation classes
+6. Repositories interfaces
+7. Entities classes along with mappings
+8. DTO classes for every entity class
+9. Apply Validations on DTO Class fields/properties
+10. Logging messages to the file
+11. GlobalException Handling along with CustomExceptions 
+12. Lombok , Swagger-UI / Postman
+13. All Best practices from java
