@@ -11,7 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.hexaware.security3.entity.UserInfo;
 
-public class UserInfoUserDetails implements UserDetails {
+public class UserInfoUserDetails implements UserDetails {  // UserDetailsImp class
 
 
     private String name;

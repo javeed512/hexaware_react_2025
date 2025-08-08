@@ -43,7 +43,7 @@ public class UserRestController {
 		Authentication authentication = authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(authRequest.getUsername(), authRequest.getPassword()));
 		
-		
+								
 
 		String token = null;
 
@@ -63,7 +63,7 @@ public class UserRestController {
 
 		}
 
-		return token;
+		return token; // if it returns token in response body means login successful..
 
 	}
 

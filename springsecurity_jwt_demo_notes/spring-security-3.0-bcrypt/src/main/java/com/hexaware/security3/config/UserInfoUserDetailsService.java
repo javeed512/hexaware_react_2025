@@ -12,7 +12,7 @@ import com.hexaware.security3.entity.UserInfo;
 import com.hexaware.security3.repository.UserInfoRepository;
 
 @Service
-public class UserInfoUserDetailsService implements UserDetailsService {
+public class UserInfoUserDetailsService implements UserDetailsService {  // UserDetailsServiceImp class
 
     @Autowired
     private UserInfoRepository repository;
